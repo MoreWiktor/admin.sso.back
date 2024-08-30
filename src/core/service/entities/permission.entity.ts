@@ -1,5 +1,6 @@
 import { ServiceEntity } from '@core/service/entities/service.entity';
 import {
+  BaseEntity,
   Column,
   CreateDateColumn,
   Entity,
@@ -10,7 +11,7 @@ import {
 } from 'typeorm';
 
 @Entity({ name: 'permissions' })
-export class PermissionEntity {
+export class PermissionEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

@@ -1,6 +1,7 @@
 import { RoleEntity } from '@core/service/entities';
 import { UserEntity } from '@core/user/entities';
 import {
+  BaseEntity,
   CreateDateColumn,
   Entity,
   JoinColumn,
@@ -10,7 +11,7 @@ import {
 } from 'typeorm';
 
 @Entity({ name: 'users_roles' })
-export class UserRoleEntity {
+export class UserRoleEntity extends BaseEntity {
   @PrimaryColumn({
     name: 'user_id',
     type: 'uuid',

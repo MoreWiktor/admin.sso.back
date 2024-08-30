@@ -1,6 +1,7 @@
 import { CompanyEntity } from '@core/company/entities';
 import { ServiceEntity } from '@core/service/entities';
 import {
+  BaseEntity,
   Column,
   CreateDateColumn,
   Entity,
@@ -11,7 +12,7 @@ import {
 } from 'typeorm';
 
 @Entity({ name: 'companies_services_access' })
-export class CompanyServiceAccessEntity {
+export class CompanyServiceAccessEntity extends BaseEntity {
   @PrimaryColumn({
     name: 'company_id',
     type: 'uuid',

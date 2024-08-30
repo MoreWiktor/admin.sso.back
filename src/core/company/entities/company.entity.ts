@@ -1,4 +1,5 @@
 import {
+  BaseEntity,
   Column,
   CreateDateColumn,
   Entity,
@@ -7,7 +8,7 @@ import {
 } from 'typeorm';
 
 @Entity({ name: 'companies' })
-export class CompanyEntity {
+export class CompanyEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

@@ -1,6 +1,7 @@
 import { AutoMap } from '@automapper/classes';
 import { CompanyEntity } from '@core/company/entities';
 import {
+  BaseEntity,
   Column,
   CreateDateColumn,
   Entity,
@@ -13,7 +14,7 @@ import {
 
 @Entity({ name: 'users' })
 @Unique('UQ_97672ac88f789774dd47f7c8be3', ['email', 'company'])
-export class UserEntity {
+export class UserEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

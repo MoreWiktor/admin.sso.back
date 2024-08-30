@@ -1,6 +1,7 @@
 import { AutoMap } from '@automapper/classes';
 import { UserEntity } from '@core/user/entities';
 import {
+  BaseEntity,
   Column,
   CreateDateColumn,
   Entity,
@@ -11,7 +12,7 @@ import {
 } from 'typeorm';
 
 @Entity({ name: 'passwords' })
-export class PasswordEntity {
+export class PasswordEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

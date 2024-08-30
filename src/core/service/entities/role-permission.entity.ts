@@ -1,6 +1,7 @@
 import { AutoMap } from '@automapper/classes';
 import { PermissionEntity, RoleEntity } from '@core/service/entities';
 import {
+  BaseEntity,
   CreateDateColumn,
   Entity,
   JoinColumn,
@@ -10,7 +11,7 @@ import {
 } from 'typeorm';
 
 @Entity({ name: 'roles_permissions' })
-export class RolePermissionEntity {
+export class RolePermissionEntity extends BaseEntity {
   @PrimaryColumn({
     name: 'role_id',
     type: 'uuid',
