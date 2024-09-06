@@ -15,5 +15,6 @@ export const appLoader = registerAs(
     cryptoSecret: process.env.CRYPTO_SECRET,
     smtpLogin: process.env.SMTP_LOGIN,
     smtpPassword: process.env.SMTP_PASSWORD,
+    frontUrl: process.env.FRONT_URL,
   }),
 );

@@ -8,10 +8,8 @@ import { AppFactory } from './app.factory';
 // import { Logger } from 'nestjs-pino';
 
 async function bootstrap() {
-  // const logger = AppFactory.logger;
   initializeTransactionalContext();
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
-  // app.useLogger(app.get(Logger));
   const appFactory = new AppFactory(app);
   const { user, pass } = appFactory.getConfig<DocsConfigType>(
     ConfigTypeEnum.DOCS,
@@ -34,6 +32,7 @@ async function bootstrap() {
         },
       },
     ])
+    .enableCors()
     .listen();
 }
 bootstrap();
