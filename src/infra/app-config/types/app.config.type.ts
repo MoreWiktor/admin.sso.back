@@ -11,4 +11,5 @@ export type AppConfigType = {
   bootstrap_emoji: string;
   smtpLogin: string;
   smtpPassword: string;
+  frontUrl: string;
 };

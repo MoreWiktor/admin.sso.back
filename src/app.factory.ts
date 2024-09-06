@@ -12,6 +12,7 @@ import { ConfigTypes } from '@infra/app-config';
 import { AppEnums } from '@shared/enums';
 import { useContainer } from 'typeorm';
 import { AppModule } from '@infra/IoCC';
+import { AppConfigType } from '@infra/app-config/types';
 
 type DocOptionsType = {
   docType: string;
@@ -112,6 +113,16 @@ export class AppFactory {
       );
     });
 
+    return this;
+  }
+
+  public enableCors(frontUrl?: string) {
+    const appConfig = this.configService.getOrThrow<AppConfigType>(
+      AppEnums.ConfigTypeEnum.APP,
+    );
+    this._app.enableCors({
+      origin: frontUrl || appConfig.frontUrl,
+    });
     return this;
   }
 
