@@ -9,8 +9,8 @@ export class FieldStyleDto implements Types.FieldStyleType {
 export class FieldDto implements Types.FieldType {
   title: string;
   type: Enums.InputTypeEnum;
-  style?: FieldStyleDto;
-  required?: boolean;
+  style: FieldStyleDto;
+  required: boolean;
 }
 
 export class ButtonStyleDto implements Types.ButtonStyleType {
@@ -24,7 +24,7 @@ export class ButtonStyleDto implements Types.ButtonStyleType {
 export class ButtonDto implements Types.ButtonType {
   title: string;
   type: Enums.ButtonTypeEnum;
-  style?: ButtonStyleDto;
+  style: ButtonStyleDto;
 }
 
 export class FormStyleDto implements Types.FormStyleType {
@@ -34,7 +34,7 @@ export class FormStyleDto implements Types.FormStyleType {
 
 export class FormDto implements Types.FormType {
   title: string;
-  style?: FormStyleDto;
+  style: FormStyleDto;
 }
 
 export class BackgroundStyleDto implements Types.BackgroundStyleType {
@@ -42,7 +42,7 @@ export class BackgroundStyleDto implements Types.BackgroundStyleType {
 }
 
 export class BackgroundDto implements Types.BackgroundType {
-  style?: BackgroundStyleDto;
+  style: BackgroundStyleDto;
 }
 
 export class PageInitDataDto implements Types.PageInitDataType {
