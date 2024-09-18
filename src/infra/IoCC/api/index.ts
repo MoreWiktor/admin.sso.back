@@ -1,4 +1,4 @@
-import { StylesApiModule } from './styles.api.module';
+import { PagesApiModule } from './pages.api.module';
 
-export const apiModules = [StylesApiModule];
+export const apiModules = [PagesApiModule];
 export * from './api.module';
